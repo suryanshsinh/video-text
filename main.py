@@ -4,6 +4,10 @@ import whisper
 import json
 app = Flask(__name__)
 
+@app.route('/')
+def hello_world():
+    return 'Hello, World!'
+
 @app.route('/video-text', methods=['POST'])
 def video_text():
     data = request.json
