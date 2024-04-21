@@ -2,3 +2,4 @@ Flask
 Gunicorn
 moviepy
 whisper
+waitress
