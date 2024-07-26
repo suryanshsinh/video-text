@@ -3,3 +3,4 @@ moviepy
 whisper
 celery
 redis
+gunicorn
