@@ -3,11 +3,10 @@ from moviepy.editor import *
 import whisper
 from .celery_config import make_celery
 from . import create_app
-import os
 
 bp = Blueprint('main', __name__)
-main = create_app()  # Call create_app() to initialize Flask app
-celery = make_celery(main)
+app = create_app()  # Initialize the Flask app
+celery = make_celery(app)
 
 @bp.route('/')
 def hello_world():
